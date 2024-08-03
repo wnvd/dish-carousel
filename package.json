@@ -1,6 +1,6 @@
 {
   "name": "circular_carousel",
-  "module": "index.js",
+  "module": "index.html",
   "main": "index.html",
   "dependencies": {
     "vite": "^5.3.5"
