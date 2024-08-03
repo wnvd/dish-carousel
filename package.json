@@ -1,0 +1,17 @@
+{
+  "name": "circular_carousel",
+  "module": "index.js",
+  "type": "module",
+  "scripts" : {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "vite": "^5.3.5"
+  }
+}

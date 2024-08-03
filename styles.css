@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background: url("./img/table-cloth3.jpg");
+  /* background-color: #c0c0c0; */
+}
+
+.wrapper {
+  width: 90rem;
+  margin: 0 auto;
+}
+
+.slideshow {
+  display: inline-flex;
+  gap: 200px;
+
+}
+
+
+.carousel {
+  /* background-color: red; */
+  width: 800px;
+  height: 800px;
+  border: 20px solid pink;
+  border-radius: 50%;
+
+  position: relative;
+  top: -400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: rotate 1.5s linear;
+
+}
+
+.carousel .slide {
+  position: absolute;
+  width: 500px;
+}
+
+.carousel .slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* postioning slides */
+.carousel .slide:nth-child(1){
+
+  top: 500px;
+}
+
+.carousel .slide:nth-child(2){
+  left: 500px;
+}
+
+.carousel .slide:nth-child(3){
+  bottom: 500px;
+}
+
+.carousel .slide:nth-child(4){
+  right: 500px;
+}
+
+/*-----------------DESCRIPTION -------------*/
+.desc {
+  width: 600px;
+  /* background-color: cyan; */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.slide-desc {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.desc > .slide-desc:not(:first-child) {
+  display: none;
+}
+
+.desc h3 {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 2.5rem;
+}
+
+.desc p {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
+}
+
+.desc h3,
+.desc p {
+  letter-spacing: 1px;
+  position: relative;
+  animation: desc-fadein 1.5s ease-in forwards;
+}
+
+.desc p {
+  animation-duration: 1.6s;
+}
+
+@keyframes desc-fadein{
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+   to{
+    transform: translateY(0px);
+    opacity: 1;
+    filter: blur(0);
+  }
+
+}
+
+/* -------------- thumbnail -------------------- */
+.thumbnail-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.thumbnails {
+  display: inline-flex;
+  background-color: #00FA9A;
+  
+  border-radius: 20px;
+}
+.thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail {
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+}
+
+.card {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: pink;
+  z-index: 1;
+
+  transition: left 1s linear;
+  left: 0;
+}
+
+.controls {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.controls button {
+  border: none;
+  border-radius: 50%;
+}
